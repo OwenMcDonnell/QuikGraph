@@ -8,7 +8,7 @@ pull_requests:
 environment:
   SONARQUBE_TOKEN:
     secure: 2I3bluR+2upDl17M1Qmnil/eSAhUFcv4uaW5vvZOveWsFkYY773KQtLmK7H8dcLI
-  NUnitConsoleVersion: 3.8.0
+  NUnitConsoleVersion: 3.10.0
   OpenCoverVersion: 4.6.519
   CoverallsVersion: 1.0.0
   COVERALLS_REPO_TOKEN:
