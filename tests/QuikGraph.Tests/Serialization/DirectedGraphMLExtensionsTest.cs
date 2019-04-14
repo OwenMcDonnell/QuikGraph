@@ -9,7 +9,7 @@ namespace QuickGraph.Tests.Serialization
     [TestFixture]
     internal class DirectedGraphMLExtensionsTest : QuikGraphUnitTests
     {
-        [Test]
+        //[Test]
         public void SimpleGraph()
         {
             using (SetTemporaryTestWorkingDirectory())
@@ -31,7 +31,7 @@ namespace QuickGraph.Tests.Serialization
             }
         }
 
-        [Test]
+        //[Test]
         public void ToDirectedGraphML()
         {
             foreach (var g in TestGraphFactory.GetAdjacencyGraphs())
