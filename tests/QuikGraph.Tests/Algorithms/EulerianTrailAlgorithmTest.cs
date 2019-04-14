@@ -15,8 +15,8 @@ namespace QuickGraph.Algorithms
         public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 #endif
 
-        [Test]
-        [Ignore("Was already ignored")]
+        //[Test]
+        //[Ignore("Was already ignored")]
         public void EulerianTrailAll()
         {
             foreach (var g in TestGraphFactory.GetAdjacencyGraphs())

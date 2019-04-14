@@ -129,8 +129,8 @@ namespace QuickGraph.Tests.Algorithms.RankedShortestPath
             return target.ComputedShortestPaths;
         }
 
-        [Test]
-        [Ignore("Was already ignored")]
+        //[Test]
+        //[Ignore("Was already ignored")]
         [Description("binary data outdated")]
         public void Repro12288()
         {
