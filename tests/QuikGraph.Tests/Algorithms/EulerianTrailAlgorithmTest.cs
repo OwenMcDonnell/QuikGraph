@@ -48,13 +48,13 @@ namespace QuickGraph.Algorithms
             var trails = trail.Trails();
             trail.RemoveTemporaryEdges();
 
-            //Console.WriteLine("trails: {0}", trails.Count);
+            ////Console.WriteLine("trails: {0}", trails.Count);
             //int index = 0;
             //foreach (var t in trails)
             //{
-            //    Console.WriteLine("trail {0}", index++);
+            //    //Console.WriteLine("trail {0}", index++);
             //    foreach (Edge<string> edge in t)
-            //        Console.WriteLine("\t{0}", t);
+            //        //Console.WriteLine("\t{0}", t);
             //}
 
             // lets make sure all the edges are in the trail

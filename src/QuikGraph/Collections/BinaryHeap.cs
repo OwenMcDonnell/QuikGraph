@@ -71,14 +71,14 @@ namespace QuickGraph.Collections
         public void Add(TPriority priority, TValue value)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("Add({0}, {1})", priority, value);
+            //Console.WriteLine("Add({0}, {1})", priority, value);
 #endif
             this.version++;
             this.ResizeArray();
             this.items[this.count++] = new KeyValuePair<TPriority, TValue>(priority, value);
             this.MinHeapifyDown(this.count - 1);
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("Add: {0}", ToString2());
+            //Console.WriteLine("Add: {0}", ToString2());
 #endif
         }
 
@@ -86,7 +86,7 @@ namespace QuickGraph.Collections
         private void MinHeapifyDown(int start)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("MinHeapifyDown");
+            //Console.WriteLine("MinHeapifyDown");
 #endif
             int current = start;
             int parent = (current - 1) / 2;
@@ -205,7 +205,7 @@ namespace QuickGraph.Collections
         public KeyValuePair<TPriority, TValue> RemoveMinimum()
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("RemoveMinimum");
+            //Console.WriteLine("RemoveMinimum");
 #endif
             if (this.count == 0)
                 throw new InvalidOperationException("heap is empty");
@@ -232,7 +232,7 @@ namespace QuickGraph.Collections
         public KeyValuePair<TPriority, TValue> RemoveAt(int index)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("RemoveAt({0})", index);
+            //Console.WriteLine("RemoveAt({0})", index);
 #endif
             if (this.count == 0)
                 throw new InvalidOperationException("heap is empty");
@@ -255,7 +255,7 @@ namespace QuickGraph.Collections
         private void MinHeapifyUp(int index)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("MinHeapifyUp");
+            //Console.WriteLine("MinHeapifyUp");
 #endif
             while (true)
             {
@@ -308,7 +308,7 @@ namespace QuickGraph.Collections
         public void Update(TPriority priority, TValue value)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("Update({0}, {1})", priority, value);
+            //Console.WriteLine("Update({0}, {1})", priority, value);
 #endif
             // find index
             var index = this.IndexOf(value);

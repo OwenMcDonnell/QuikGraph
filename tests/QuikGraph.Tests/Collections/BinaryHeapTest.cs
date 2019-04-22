@@ -149,7 +149,7 @@ namespace QuickGraph.Collections
             var heap = BinaryHeapFactory.ExampleHeap01();
             heap.Update(1, 4);
             Assert.AreEqual(15, heap.Count);
-            Console.WriteLine(heap.ToStringTree());
+            //Console.WriteLine(heap.ToStringTree());
             heap.AssertInvariants();
         }
 
@@ -158,7 +158,7 @@ namespace QuickGraph.Collections
         {
             var heap = BinaryHeapFactory.ExampleHeapFromTopologicalSortOfDCT8();
             heap.Update(1, 320);
-            Console.WriteLine(heap.ToStringTree());
+            //Console.WriteLine(heap.ToStringTree());
             heap.AssertInvariants();
         }
 
@@ -168,7 +168,7 @@ namespace QuickGraph.Collections
             var heap = BinaryHeapFactory.ExampleHeap01();
             heap.RemoveAt(4);
             Assert.AreEqual(14, heap.Count);
-            Console.WriteLine(heap.ToStringTree());
+            //Console.WriteLine(heap.ToStringTree());
             heap.AssertInvariants();
         }
 
@@ -177,7 +177,7 @@ namespace QuickGraph.Collections
         {
             var heap = BinaryHeapFactory.ExampleHeapFromTopologicalSortOfDCT8();
             heap.RemoveAt(66);
-            Console.WriteLine(heap.ToStringTree());
+            //Console.WriteLine(heap.ToStringTree());
             heap.AssertInvariants();
         }
 
@@ -187,7 +187,7 @@ namespace QuickGraph.Collections
             var heap = BinaryHeapFactory.ExampleHeap01();
             heap.RemoveMinimum();
             Assert.AreEqual(14, heap.Count);
-            Console.WriteLine(heap.ToStringTree());
+            //Console.WriteLine(heap.ToStringTree());
             heap.AssertInvariants();
         }
 
@@ -196,7 +196,7 @@ namespace QuickGraph.Collections
         {
             var heap = BinaryHeapFactory.ExampleHeapFromTopologicalSortOfDCT8();
             heap.RemoveMinimum();
-            Console.WriteLine(heap.ToStringTree());
+            //Console.WriteLine(heap.ToStringTree());
             heap.AssertInvariants();
         }
     }

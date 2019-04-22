@@ -39,23 +39,23 @@ namespace QuickGraph.Tests.Algorithms.ShortestPath
             var g = CreateGraph(distances);
             var fw = new FloydWarshallAllShortestPathAlgorithm<char, Edge<char>>(g, e => distances[e]);
             fw.Compute();
-            fw.Dump(Console.Out);
+            //fw.Dump(Console.Out);
             foreach (var i in g.Vertices)
                 foreach (var j in g.Vertices)
                 {
-                    Console.Write("{0} -> {1}:", i, j);
+                    //Console.Write("{0} -> {1}:", i, j);
                     IEnumerable<Edge<char>> path;
                     if (fw.TryGetPath(i, j, out path))
                     {
                         double cost = 0;
                         foreach (var edge in path)
                         {
-                            Console.Write("{0}, ", edge.Source);
+                            //Console.Write("{0}, ", edge.Source);
                             cost += distances[edge];
                         }
-                        Console.Write("{0} --- {1}", j, cost);
+                        //Console.Write("{0} --- {1}", j, cost);
                     }
-                    Console.WriteLine();
+                    //Console.WriteLine();
                 }
             {
                 double distance;
@@ -198,13 +198,13 @@ namespace QuickGraph.Tests.Algorithms.ShortestPath
 
         private static void DumpPaths<TVertex, TEdge>(TVertex source, TVertex target, TEdge[] fwedges, TEdge[] dijedges) where TEdge : IEdge<TVertex>
         {
-            Console.WriteLine("path: {0}->{1}", source, target);
-            Console.WriteLine("dijkstra:");
-            for (int j = 0; j < dijedges.Length; ++j)
-                Console.WriteLine("\t{0}", dijedges[j]);
-            Console.WriteLine("floyd:");
-            for (int j = 0; j < fwedges.Length; ++j)
-                Console.WriteLine("\t{0}", fwedges[j]);
+            //Console.WriteLine("path: {0}->{1}", source, target);
+            //Console.WriteLine("dijkstra:");
+            //for (int j = 0; j < dijedges.Length; ++j)
+                //Console.WriteLine("\t{0}", dijedges[j]);
+            //Console.WriteLine("floyd:");
+            //for (int j = 0; j < fwedges.Length; ++j)
+                //Console.WriteLine("\t{0}", fwedges[j]);
         }
     }
 

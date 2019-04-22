@@ -54,8 +54,8 @@ namespace QuickGraph.Algorithms.RandomWalks
 
             var target = new CyclePoppingRandomTreeAlgorithm<int, SEquatableEdge<int>>(graph);
             target.Compute(2);
-            foreach(var kv in target.Successors)
-                Console.WriteLine("{0}: {1}", kv.Key, kv.Value);
+            //foreach(var kv in target.Successors)
+                //Console.WriteLine("{0}: {1}", kv.Key, kv.Value);
         }
 
         [Test]

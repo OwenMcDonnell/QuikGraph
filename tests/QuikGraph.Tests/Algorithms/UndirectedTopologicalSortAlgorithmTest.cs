@@ -21,8 +21,8 @@ namespace QuickGraph.Algorithms
         private void Display(UndirectedTopologicalSortAlgorithm<string, Edge<string>> topo)
         {
             int index = 0;
-            foreach (string v in topo.SortedVertices)
-                Console.WriteLine("{0}: {1}", index++, v);
+            //foreach (string v in topo.SortedVertices)
+                //Console.WriteLine("{0}: {1}", index++, v);
         }
     }
 }

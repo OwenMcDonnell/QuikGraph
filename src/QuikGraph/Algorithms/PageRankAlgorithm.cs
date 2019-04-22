@@ -156,7 +156,7 @@ namespace QuickGraph.Algorithms.Ranking
 
                 iter++;
             } while (error > this.tolerance && iter < this.maxIterations);
-            Console.WriteLine("{0}, {1}", iter, error);
+            //Console.WriteLine("{0}, {1}", iter, error);
         }
 
         public double GetRanksSum()

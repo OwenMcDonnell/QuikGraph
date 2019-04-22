@@ -32,7 +32,7 @@ namespace QuickGraph.Serialization
 
         public static BidirectionalGraph<string, Edge<string>> LoadBidirectionalGraph(string graphmlFile)
         {
-            Console.WriteLine(graphmlFile);
+            //Console.WriteLine(graphmlFile);
             var g = new BidirectionalGraph<string, Edge<string>>();
             using (var reader = new StreamReader(graphmlFile))
             {
@@ -57,7 +57,7 @@ namespace QuickGraph.Serialization
 
         public static AdjacencyGraph<string, Edge<string>> LoadGraph(string graphmlFile)
         {
-            Console.WriteLine(graphmlFile);
+            //Console.WriteLine(graphmlFile);
             var g = new AdjacencyGraph<string, Edge<string>>();
             using (var reader = new StreamReader(graphmlFile))
             {
@@ -98,7 +98,7 @@ namespace QuickGraph.Serialization
         {
             foreach (var graphmlFile in TestGraphFactory.GetFileNames())
             {
-                Console.Write(graphmlFile);
+                //Console.Write(graphmlFile);
                 var g = new AdjacencyGraph<string, Edge<string>>();
                 using (var reader = new StreamReader(graphmlFile))
                 {
@@ -108,7 +108,7 @@ namespace QuickGraph.Serialization
                         (source, target, id) => new Edge<string>(source, target)
                         );
                 }
-                Console.Write(": {0} vertices, {1} edges", g.VertexCount, g.EdgeCount);
+                //Console.Write(": {0} vertices, {1} edges", g.VertexCount, g.EdgeCount);
 
                 var vertices = new Dictionary<string, string>();
                 foreach(var v in g.Vertices)
@@ -131,7 +131,7 @@ namespace QuickGraph.Serialization
                         string id = node.GetAttribute("id", "");
                         Assert.IsTrue(vertices.ContainsKey(id));
                     }
-                    Console.Write(", vertices ok");
+                    //Console.Write(", vertices ok");
 
                     // check all edges are loaded
                     foreach (XPathNavigator node in doc.CreateNavigator().Select("/graphml/graph/edge"))
@@ -140,9 +140,9 @@ namespace QuickGraph.Serialization
                         string target = node.GetAttribute("target", "");
                         Assert.IsTrue(g.ContainsEdge(vertices[source], vertices[target]));
                     }
-                    Console.Write(", edges ok");
+                    //Console.Write(", edges ok");
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
             }
         }
     }

@@ -58,12 +58,12 @@ namespace QuickGraph.Tests.Algorithms.Search
 
             if (recorder.VertexPredecessors.ContainsKey(target))
             {
-                Console.WriteLine("cost: {0}", recorder.VertexPredecessors[target]);
+                //Console.WriteLine("cost: {0}", recorder.VertexPredecessors[target]);
                 IEnumerable<TEdge> path;
                 Assert.IsTrue(recorder.TryGetPath(target, out path));
             }
 #if DEBUG
-            Console.WriteLine("operator max count: {0}", search.OperatorMaxCount);
+            //Console.WriteLine("operator max count: {0}", search.OperatorMaxCount);
 #endif
         }
 
