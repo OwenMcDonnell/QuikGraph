@@ -77,6 +77,7 @@ before_test:
   - ps: dotnet tool install --tool-path tools --version $env:CoverallsVersion coveralls.net
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
+
 after_test: 
 # Coverage
 # Setup variables
