@@ -75,6 +75,7 @@ before_test:
   - ps: nuget install OpenCover -Version $env:OpenCoverVersion -OutputDirectory tools
 # .Net tool for coverage
   - ps: dotnet tool install --tool-path tools --version $env:CoverallsVersion coveralls.net
+  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 after_test: 
 # Coverage
@@ -109,3 +110,6 @@ deploy:
     skip_symbols: true
     on:
       configuration: Release
+
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
