@@ -30,7 +30,7 @@ namespace QuikGraph.Algorithms.ShortestPath
                     }
                     catch (NonAcyclicGraphException)
                     {
-                        Console.WriteLine("NonAcyclicGraphException caught (as expected)");
+                        //Console.WriteLine("NonAcyclicGraphException caught (as expected)");
                     }
                 }
             }
@@ -68,7 +68,7 @@ namespace QuikGraph.Algorithms.ShortestPath
                     }
                     catch (NonAcyclicGraphException)
                     {
-                        Console.WriteLine("NonAcyclicGraphException caught (as expected)");
+                        //Console.WriteLine("NonAcyclicGraphException caught (as expected)");
                     }
                 }
             }

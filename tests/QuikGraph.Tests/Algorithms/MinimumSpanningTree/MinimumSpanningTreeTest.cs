@@ -17,7 +17,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
     {
         private UndirectedGraph<string, TaggedEdge<string, double>> GetUndirectedFullGraph(int vert)
         {
-            Console.WriteLine("Start");
+            //Console.WriteLine("Start");
             var usedEdge = new List<KeyValuePair<int, int>>();
             var random = new Random();
             var graph = new UndirectedGraph<string, TaggedEdge<string, double>>();
@@ -43,7 +43,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyPrim(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Prim50()
@@ -54,7 +54,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyPrim(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Prim100()
@@ -65,7 +65,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyPrim(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Prim200()
@@ -76,7 +76,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyPrim(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Prim300()
@@ -87,7 +87,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyPrim(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Prim400()
@@ -98,7 +98,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyPrim(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Kruskal10()
@@ -109,7 +109,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyKruskal(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Kruskal50()
@@ -120,7 +120,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyKruskal(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Kruskal100()
@@ -131,7 +131,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyKruskal(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Kruskal200()
@@ -142,7 +142,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyKruskal(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Kruskal300()
@@ -153,7 +153,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyKruskal(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
         [Test]
         public void Kruskal400()
@@ -164,7 +164,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
             MyKruskal(graph, x => x.Tag);
             m += DateTime.Now.ToString() + " " + DateTime.Now.Millisecond + "\n";
-            System.Console.Write(m);
+            //System.Console.Write(m);
         }
 
         [Test]
@@ -237,7 +237,7 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             using (edgeRecorder.Attach(algorithm))
                 algorithm.Compute();
 
-            Console.WriteLine("tree cost: {0}", edgeRecorder.Edges.Count);
+            //Console.WriteLine("tree cost: {0}", edgeRecorder.Edges.Count);
             AssertSpanningTree<TVertex, TEdge>(g, edgeRecorder.Edges);
         }
 
@@ -247,10 +247,10 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             where TEdge : IEdge<TVertex>
         {
             var spanned = new Dictionary<TVertex, TEdge>();
-            Console.WriteLine("tree:");
+            //Console.WriteLine("tree:");
             foreach (var e in tree)
             {
-                Console.WriteLine("\t{0}", e);
+                //Console.WriteLine("\t{0}", e);
                 spanned[e.Source] = spanned[e.Target] = default(TEdge);
             }
 
@@ -282,12 +282,12 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Count: {0} - {1}", left.Count, right.Count);
+                //Console.WriteLine("Count: {0} - {1}", left.Count, right.Count);
                 foreach (var kv in left)
                 {
                     TEdge e;
-                    Console.WriteLine(
-                        "{0} - {1}", kv.Value, right.TryGetValue(kv.Key, out e) ? e.ToString() : "missing");
+                    //Console.WriteLine(
+                    //    "{0} - {1}", kv.Value, right.TryGetValue(kv.Key, out e) ? e.ToString() : "missing");
                 }
 
                 Assert.Fail("Comparison failed", ex);
@@ -313,14 +313,14 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
 
             var primCost = prim.Sum(e => distances[e]);
             var kruskalCost = kruskal.Sum(e => distances[e]);
-            Console.WriteLine("prim cost: {0}", primCost);
-            Console.WriteLine("kruskal cost: {0}", kruskalCost);
+            //Console.WriteLine("prim cost: {0}", primCost);
+            //Console.WriteLine("kruskal cost: {0}", kruskalCost);
             if (primCost != kruskalCost)
             {
                 GraphConsoleSerializer.DisplayGraph(g);
-                Console.WriteLine("prim: {0}", String.Join(", ", Array.ConvertAll(prim.ToArray(), e => e.ToString() + ':' + distances[e])));
-                Console.WriteLine("krus: {0}", String.Join(", ", Array.ConvertAll(kruskal.ToArray(), e => e.ToString() + ':' + distances[e])));
-                System.Console.Write("cost do not match");
+                //Console.WriteLine("prim: {0}", String.Join(", ", Array.ConvertAll(prim.ToArray(), e => e.ToString() + ':' + distances[e])));
+                //Console.WriteLine("krus: {0}", String.Join(", ", Array.ConvertAll(kruskal.ToArray(), e => e.ToString() + ':' + distances[e])));
+                //System.Console.Write("cost do not match");
             }
 
             return kruskalCost;
@@ -376,15 +376,15 @@ namespace QuikGraph.Tests.Algorithms.MinimumSpanningTree
 
             var prim = ug.MinimumSpanningTreePrim(e => e.Tag).ToList();
             var pcost = prim.Sum(e => e.Tag);
-            Console.WriteLine("prim cost {0}", pcost);
-            foreach (var e in prim)
-                Console.WriteLine(e);
+            //Console.WriteLine("prim cost {0}", pcost);
+            //foreach (var e in prim)
+                //Console.WriteLine(e);
 
             var kruskal = ug.MinimumSpanningTreeKruskal(e => e.Tag).ToList();
             var kcost = kruskal.Sum(e => e.Tag);
-            Console.WriteLine("kruskal cost {0}", kcost);
-            foreach (var e in kruskal)
-                Console.WriteLine(e);
+            //Console.WriteLine("kruskal cost {0}", kcost);
+            //foreach (var e in kruskal)
+                //Console.WriteLine(e);
 
             Assert.AreEqual(pcost, 63);
             Assert.AreEqual(pcost, kcost);

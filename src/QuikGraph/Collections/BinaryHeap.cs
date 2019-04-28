@@ -118,7 +118,7 @@ namespace QuikGraph.Collections
         public void Add([NotNull] TPriority priority, [NotNull] TValue value)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine($"Add({priority}, {value})");
+            //Console.WriteLine("Add({0}, {1})", priority, value);
 #endif
 
             _version++;
@@ -127,14 +127,14 @@ namespace QuikGraph.Collections
             MinHeapifyUp(Count - 1);
 
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("Add: {0}", ToString2());
+            //Console.WriteLine("Add: {0}", ToString2());
 #endif
         }
 
         private void MinHeapifyUp(int start)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("MinHeapifyUp");
+            //Console.WriteLine("MinHeapifyDown");
 #endif
             int current = start;
             int parent = (current - 1) / 2;
@@ -239,7 +239,7 @@ namespace QuikGraph.Collections
         public KeyValuePair<TPriority, TValue> RemoveMinimum()
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("RemoveMinimum");
+            //Console.WriteLine("RemoveMinimum");
 #endif
 
             if (Count == 0)
@@ -269,7 +269,7 @@ namespace QuikGraph.Collections
         public KeyValuePair<TPriority, TValue> RemoveAt(int index)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine($"RemoveAt({index})");
+            //Console.WriteLine("RemoveAt({0})", index);
 #endif
 
             if (Count == 0)
@@ -292,7 +292,7 @@ namespace QuikGraph.Collections
         private void MinHeapifyDown(int index)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine("MinHeapifyDown");
+            //Console.WriteLine("MinHeapifyUp");
 #endif
 
             while (true)
@@ -368,7 +368,7 @@ namespace QuikGraph.Collections
         public void Update([NotNull] TPriority priority, [NotNull] TValue value)
         {
 #if BINARY_HEAP_DEBUG
-            Console.WriteLine($"Update({priority}, {value})");
+            //Console.WriteLine("Update({0}, {1})", priority, value);
 #endif
 
             // Find index

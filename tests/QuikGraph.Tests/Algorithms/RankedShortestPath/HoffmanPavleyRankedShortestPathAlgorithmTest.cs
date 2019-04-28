@@ -116,7 +116,7 @@ namespace QuikGraph.Tests.Algorithms.RankedShortestPath
             double lastWeight = double.MinValue;
             foreach (var path in target.ComputedShortestPaths)
             {
-                Console.WriteLine("path: {0}", Enumerable.Sum(path, e => edgeWeights[e]));
+                //Console.WriteLine("path: {0}", Enumerable.Sum(path, e => edgeWeights[e]));
                 double weight = Enumerable.Sum(path, e => edgeWeights[e]);
                 Assert.IsTrue(lastWeight <= weight, "{0} <= {1}", lastWeight, weight);
                 Assert.AreEqual(rootVertex, Enumerable.First(path).Source);

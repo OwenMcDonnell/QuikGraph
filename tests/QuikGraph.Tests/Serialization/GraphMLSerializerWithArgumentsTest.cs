@@ -24,12 +24,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._string;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._string = value;
                 }
             }
@@ -40,12 +40,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._int;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._int = value;
                 }
             }
@@ -56,12 +56,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._long;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._long = value;
                 }
             }
@@ -72,12 +72,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._bool;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._bool = value;
                 }
             }
@@ -88,12 +88,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._float;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._float = value;
                 }
             }
@@ -104,12 +104,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._double;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._double = value;
                 }
             }
@@ -120,12 +120,12 @@ namespace QuikGraph.Serialization
             {
                 get 
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._stringarray; 
                 }
                 set 
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._stringarray = value;
                 }
             }
@@ -135,12 +135,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._intarray;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._intarray = value;
                 }
             }
@@ -150,12 +150,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._longarray;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._longarray = value;
                 }
             }
@@ -166,12 +166,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._boolarray;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._boolarray = value;
                 }
             }
@@ -182,12 +182,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._floatarray;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._floatarray = value;
                 }
             }
@@ -198,12 +198,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._doublearray;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._doublearray = value;
                 }
             }
@@ -213,12 +213,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return null;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     Assert.IsNull(value);
                 }
             }
@@ -231,12 +231,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._stringilist;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._stringilist = value;
                 }
             }
@@ -246,12 +246,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._intilist;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._intilist = value;
                 }
             }
@@ -261,12 +261,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._longilist;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._longilist = value;
                 }
             }
@@ -277,12 +277,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._boolilist;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._boolilist = value;
                 }
             }
@@ -293,12 +293,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._floatilist;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._floatilist = value;
                 }
             }
@@ -309,12 +309,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._doubleilist;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._doubleilist = value;
                 }
             }
@@ -344,12 +344,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._stringd;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._stringd = value;
                 }
             }
@@ -361,12 +361,12 @@ namespace QuikGraph.Serialization
             {
                 get 
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._string; 
                 }
                 set 
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._string = value;
                 }
             }
@@ -377,12 +377,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._int;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._int = value;
                 }
             }
@@ -393,12 +393,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._long;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._long = value;
                 }
             }
@@ -409,12 +409,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._bool;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._bool = value;
                 }
             }
@@ -425,12 +425,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._float;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._float = value;
                 }
             }
@@ -441,12 +441,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._double;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._double = value;
                 }
             }
@@ -457,12 +457,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._intArray;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._intArray = value;
                 }
             }
@@ -473,12 +473,12 @@ namespace QuikGraph.Serialization
             {
                 get
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     return this._intIList;
                 }
                 set
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod());
+                    //Console.WriteLine(MethodInfo.GetCurrentMethod());
                     this._intIList = value;
                 }
             }
@@ -642,7 +642,7 @@ namespace QuikGraph.Serialization
                         );
 
                 xml = writer.ToString();
-                Console.WriteLine("serialized: " + xml);
+                //Console.WriteLine("serialized: " + xml);
             }
 
             TestGraph newg;
@@ -667,7 +667,7 @@ namespace QuikGraph.Serialization
                         v => v.ID,
                         e => e.ID);
                 newxml = writer.ToString();
-                Console.WriteLine("roundtrip: " + newxml);
+                //Console.WriteLine("roundtrip: " + newxml);
             }
 
             Assert.AreEqual(xml, newxml);
