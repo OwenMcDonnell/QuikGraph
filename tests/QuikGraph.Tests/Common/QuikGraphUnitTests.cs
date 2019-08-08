@@ -8,7 +8,6 @@ namespace QuikGraph.Tests
     /// <summary>
     /// Base class for QuikGraph unit tests.
     /// </summary>
-    [SetUpFixture]
     internal class QuikGraphUnitTests
     {
         /// <summary>
