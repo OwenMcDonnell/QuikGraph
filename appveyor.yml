@@ -102,6 +102,9 @@ artifacts:
   - path: '**\bin\Release\*.nupkg'
     name: NuGet
 
+  - path: coverage.xml
+    name: Coverage
+
 # Documentation
 before_deploy:
   - ps: ./releaseDoc.ps1
