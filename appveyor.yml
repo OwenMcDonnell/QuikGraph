@@ -69,7 +69,7 @@ before_build:
   - nuget restore -verbosity detailed
 
 build:
-  project: quickgraph.sln
+  project: QuikGraph.sln
   verbosity: minimal
 
 #build_script:
