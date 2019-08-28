@@ -32,21 +32,21 @@ init:
     }
 
 # Assembly infos & csproj patching
-assembly_info:
-  patch: true
-  file: '**\\AssemblyInfo.*'
-  assembly_version: '$(Build_Version)'
-  assembly_file_version: '$(Build_Version)'
-  assembly_informational_version: '$(Build_Version)'
+#assembly_info:
+ # patch: true
+ # file: '**\\AssemblyInfo.*'
+ # assembly_version: '$(Build_Version)'
+ # assembly_file_version: '$(Build_Version)'
+ # assembly_informational_version: '$(Build_Version)'
 
-dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '$(Build_Version)'
-  package_version: '$(Build_Version)'
-  assembly_version: '$(Build_Version)'
-  file_version: '$(Build_Version)'
-  informational_version: '$(Build_Version)'
+#dotnet_csproj:
+ # patch: true
+ # file: '**\*.csproj'
+ # version: '$(Build_Version)'
+ # package_version: '$(Build_Version)'
+ # assembly_version: '$(Build_Version)'
+ # file_version: '$(Build_Version)'
+ # informational_version: '$(Build_Version)'
 
 # Build configurations
 platform:
@@ -54,7 +54,7 @@ platform:
 
 configuration:
   - Debug
-  - Release
+  #- Release
 
 matrix:
   fast_finish: true
@@ -71,10 +71,10 @@ before_build:
 build:
   verbosity: minimal
 
-build_script:
-  - ps: $analysisFile = (Convert-Path SonarQube.Analysis.xml).ToString()
-  - ps: SonarScanner.MSBuild.exe begin /k:"quikgraph" /s:$analysisFile /o:"kernelith-github" /d:sonar.host.url="https://sonarcloud.io" /d:"sonar.branch.name=$env:APPVEYOR_REPO_BRANCH" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.login="$env:SONARQUBE_TOKEN"
-  - msbuild
+#build_script:
+ # - ps: $analysisFile = (Convert-Path SonarQube.Analysis.xml).ToString()
+  #- ps: SonarScanner.MSBuild.exe begin /k:"quikgraph" /s:$analysisFile /o:"kernelith-github" /d:sonar.host.url="https://sonarcloud.io" /d:"sonar.branch.name=$env:APPVEYOR_REPO_BRANCH" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.login="$env:SONARQUBE_TOKEN"
+  #- msbuild
 
 before_test:
 # NuGet packages for coverage
@@ -104,18 +104,3 @@ artifacts:
 
   - path: coverage.xml
     name: Coverage
-
-# Documentation
-before_deploy:
-  - ps: ./releaseDoc.ps1
-
-# Deploy
-deploy:
-# MyGet
-  - provider: NuGet
-    server: https://www.myget.org/F/kernelith-ci/api/v2/package
-    api_key:
-      secure: ANF+joC2B+NahxCFbLPOjNvEAo36F2F4QJu6zLwoIf2I9KwkxKyCSuNxDpLmJmtU
-    skip_symbols: true
-    on:
-      configuration: Release
