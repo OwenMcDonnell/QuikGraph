@@ -95,8 +95,8 @@ after_test:
   - ps: >-
       & $opencover -register:user -filter:"+[*]* -[*.Test*]* -[*]JetBrains.Annotations*" -target:"$nunitConsole" -targetargs:"$testAssemblies" -log:Warn -output:coverage.xml
   #- ps: SonarScanner.MSBuild.exe end /d:"sonar.login=$env:SONARQUBE_TOKEN"
-  - ps: >-
-      & $coveralls --opencover -i coverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --useRelativePaths --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_BUILD_NUMBER --serviceName appveyor
+  #- ps: >-
+   #   & $coveralls --opencover -i coverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --useRelativePaths --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_BUILD_NUMBER --serviceName appveyor
 
 # Artifact
 artifacts:  
