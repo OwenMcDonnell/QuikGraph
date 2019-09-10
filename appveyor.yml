@@ -1,5 +1,5 @@
 version: '0.0.{build}'
-image: previous Visual Studio 2017
+image: Visual Studio 2017
 
 # Setup environment
 pull_requests:
@@ -62,7 +62,7 @@ matrix:
 # Build
 before_build:
 # Chocolatey SonarQube
-  - cinst msbuild-sonarqube-runner
+  - cinst sonarscanner-msbuild-net46
 # Chocolatey DocFX
   - ps: cinst docfx --version $env:DocFXVersion
 # NuGet restore
