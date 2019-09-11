@@ -74,7 +74,7 @@ before_build:
   #verbosity: minimal
 
 build_script:
-  #- ps: $analysisFile = (Convert-Path SonarQube.Analysis.xml).ToString()
+  - ps: $analysisFile = (Convert-Path SonarQube.Analysis.xml).ToString()
   - ps: SonarScanner.MSBuild.exe begin /k:"quikgraph" /s:$analysisFile /o:"kernelith-github" /d:sonar.host.url="https://sonarcloud.io" /d:"sonar.branch.name=$env:APPVEYOR_REPO_BRANCH" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.login="$env:SONARQUBE_TOKEN"
   - msbuild "C:\projects\quikgraph\QuikGraph.sln" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
@@ -95,7 +95,7 @@ after_test:
 # Generate coverage report
   - ps: >-
       & $opencover -register:user -filter:"+[*]* -[*.Test*]* -[*]JetBrains.Annotations*" -target:"$nunitConsole" -targetargs:"$testAssemblies" -log:Warn -output:coverage.xml
-  - ps: SonarScanner.MSBuild.exe end /d:"sonar.login=$env:SONARQUBE_TOKEN"
+  - ps: SonarScanner.MSBuild.exe end
   #- ps: >-
    #   & $coveralls --opencover -i coverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --useRelativePaths --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_BUILD_NUMBER --serviceName appveyor
 
