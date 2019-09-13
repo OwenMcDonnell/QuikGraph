@@ -1,6 +1,8 @@
 version: '0.0.{build}'
 
-image: Visual Studio 2017
+image: 
+  - Visual Studio 2017
+  - Previous Visual Studio 2017
 
 # Setup environment
 pull_requests:
@@ -75,9 +77,9 @@ before_build:
 
 build_script:
   - ps: $analysisFile = (Convert-Path SonarQube.Analysis.xml).ToString()
-  - ps: SonarScanner.MSBuild.exe begin /d:sonar.cs.opencover.reportsPaths="coverage.xml"
-  - msbuild "C:\projects\quikgraph\QuikGraph.sln" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-
+  #- ps: SonarScanner.MSBuild.exe begin /d:sonar.cs.opencover.reportsPaths="coverage.xml"
+  - msbuild
+  
 before_test:
 # NuGet packages for coverage
   - ps: nuget install NUnit.Console -Version $env:NUnitConsoleVersion -OutputDirectory tools
@@ -89,13 +91,17 @@ after_test:
 # Coverage
 # Setup variables
   - ps: $opencover = (Resolve-Path "tools\OpenCover.*\tools\OpenCover.Console.exe").ToString()
+  - ps: write-host $opencover
   - ps: $nunitConsole = (Resolve-Path "tools\NUnit.ConsoleRunner.*\tools\nunit3-console.exe").ToString()
+  - ps: write-host $nunitConsole
   - ps: $coveralls = (Resolve-Path "tools\csmacnz.Coveralls.exe").ToString()
-  - ps: $testAssemblies = (ls tests\*.Tests\bin\$env:Configuration\net45\*Tests.dll | Where-Object { $_ -Match "net*" -and $_ -NotMatch "netcoreapp*" } | % FullName | sort-object -Unique)
+  - ps: write-host $coveralls
+  - ps: $testAssemblies = (ls tests\*.Tests\bin\$env:Configuration\*\*Tests.dll | Where-Object { $_ -Match "net*" -and $_ -NotMatch "netcoreapp*" } | % FullName | sort-object -Unique)
+  - ps: write-host $testAssemblies
 # Generate coverage report
   - ps: >-
       & $opencover -register:user -filter:"+[*]* -[*.Test*]* -[*]JetBrains.Annotations*" -target:"$nunitConsole" -targetargs:"$testAssemblies" -log:Warn -output:coverage.xml
-  - ps: SonarScanner.MSBuild.exe end
+  #- ps: SonarScanner.MSBuild.exe end
   #- ps: >-
    #   & $coveralls --opencover -i coverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --useRelativePaths --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_BUILD_NUMBER --serviceName appveyor
 
